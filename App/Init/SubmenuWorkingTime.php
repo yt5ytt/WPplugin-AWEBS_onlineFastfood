@@ -27,7 +27,7 @@ class SubmenuWorkingTime
   }
 
   public function AWEBS_Fastfood_workingTime(){
-    require_once( AWEBS__PLUGIN_ROOT . 'Includes' . DIRECTORY_SEPARATOR . 'adminPages' . DIRECTORY_SEPARATOR . 'AWEBS_Fastfood_workingTime.php');
+    require_once( AWEBS__PLUGIN_ROOT . 'includes' . DIRECTORY_SEPARATOR . 'adminPages' . DIRECTORY_SEPARATOR . 'AWEBS_Fastfood_workingTime.php');
   }
 
 }

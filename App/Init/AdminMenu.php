@@ -27,7 +27,7 @@ class AdminMenu
   }
 
   public function AWEBS_Fastfood_index(){
-    require_once( AWEBS__PLUGIN_ROOT . 'Includes' . DIRECTORY_SEPARATOR . 'adminPages' . DIRECTORY_SEPARATOR . 'AWEBS_Fastfood_index.php');
+    require_once( AWEBS__PLUGIN_ROOT . 'includes' . DIRECTORY_SEPARATOR . 'adminPages' . DIRECTORY_SEPARATOR . 'AWEBS_Fastfood_index.php');
   }
 
 }

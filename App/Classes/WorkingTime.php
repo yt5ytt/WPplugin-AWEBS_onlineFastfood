@@ -22,6 +22,7 @@ class WorkingTime
     $this->tableName = $wpdb->prefix . 'workingtime';
   }
 
+
   /**
    * Creation of DB table which handles working time data
    * @return
@@ -38,6 +39,7 @@ class WorkingTime
     include_once(ABSPATH . 'wp-admin' . DIRECTORY_SEPARATOR . 'includes' . DIRECTORY_SEPARATOR . 'upgrade.php');
     dbDelta($sql);
   }
+
 
   /**
    * Sets default working time in workingtime DB table
@@ -57,16 +59,18 @@ class WorkingTime
     endif;
   }
 
+
   /**
    *Gets working time data from workingtime DB table
-   * @return Array      Array of working time data
+   * @return Object      Object of working time data
    */
    protected function getWorkingTime(){
      global $wpdb;
-     $sql = "SELECT * FROM $this->tableName";
-     $results = $wpdb->get_results($sql);
+     $sql = "SELECT * FROM $this->tableName WHERE id=$this->id";
+     $results = $wpdb->get_row($sql);
      return $results;
    }
+
 
    /**
     * Update working time on request

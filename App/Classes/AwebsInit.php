@@ -15,7 +15,7 @@ namespace Classes;
     }
 
     public function frontMenuPage(){
-      require_once (AWEBS__PLUGIN_ROOT . 'Includes' . DIRECTORY_SEPARATOR . 'frontendPages' . DIRECTORY_SEPARATOR . 'frontMenuPage.php');
+      require_once (AWEBS__PLUGIN_ROOT . 'includes' . DIRECTORY_SEPARATOR . 'frontendPages' . DIRECTORY_SEPARATOR . 'frontMenuPage.php');
     }
 
     //Creating DB table for food categories

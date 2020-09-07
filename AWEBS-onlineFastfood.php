@@ -17,7 +17,7 @@ endif;
 
 //define PLUGIN root directory
 define('AWEBS__PLUGIN_ROOT', ABSPATH . 'wp-content/plugins/AWEBS-onlineFastfood/');
-define('AWEBS__PLUGIN_URL', plugins_url('AWEBS-onlineFastfood/'));
+define('AWEBS__PLUGIN_URL', plugins_url(DIRECTORY_SEPARATOR, __FILE__));
 
 require_once(AWEBS__PLUGIN_ROOT . 'vendor'. DIRECTORY_SEPARATOR . 'autoload.php');
 

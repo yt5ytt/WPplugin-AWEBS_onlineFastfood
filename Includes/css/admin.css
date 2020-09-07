@@ -1,3 +1,7 @@
+/**
+  Default .css styling
+*/
+
 *{
   margin: 0;
   padding: 0;
@@ -8,11 +12,50 @@
   margin: 0 auto;
 }
 
-#awebsIndex h1{
-  color: red;
-  margin-top: 3%;
+h1{
+  font-weight: bold;
+  font-size: 2rem;
 }
 
-#awebsIndex p{
+h2{
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 5%;
+}
+
+button{
+  line-height: 2rem;
+  padding: 0 5%;
+}
+
+/**
+  Working time admin page
+*/
+
+#workingTime, p{
   font-size: 1.2rem;
+}
+
+#workingTime .row{
+  line-height: 2rem;
+  margin: 2% 0;
+  width: 50%;
+  display: block;
+  overflow: hidden;
+  text-align: center;
+}
+
+#workingTime .label{
+  float: left;
+  line-height: 2rem;
+  margin-right: 1%;
+  width: 49%;
+  text-align: right;
+}
+
+#workingTime .select{
+  width: 50%;
+  text-align: left;
+  line-height: 2rem;
+  float: left;
 }
