@@ -21,7 +21,8 @@
        Init\Deactivate::class,
        Init\Enqueue::class,
        Init\AdminMenu::class,
-       Init\SubmenuWorkingTime::class
+       Init\SubmenuWorkingTime::class,
+       Init\FormPosts::class
      ];
    }
 
@@ -38,7 +39,7 @@
        if(method_exists($service, 'register')){
          $service->register();
        }
-       
+
      }
 
    }

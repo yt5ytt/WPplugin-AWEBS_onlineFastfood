@@ -7,6 +7,8 @@
   $view = new WorkingTimeView();
   $openTime = $view->openHour . ':' . $view->openMinute;
   $closeTime = $view->closeHour . ':' . $view->closeMinute;
+
+  $awebs_add_meta_nonce = wp_create_nonce( 'awebs_add_user_meta_form_nonce' );
 ?>
 
 <div id="workingTime" class="wrapper">
@@ -18,14 +20,17 @@
 
   <div class="form">
 
-    <form action="<?php echo $_SERVER['PHP_SELF'] . '?page=working-time'; ?>" method="post">
+    <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post">
+
+      <input type="hidden" name="action" value="awebs_working_time" />
+      <input type="hidden" name="awebs_add_user_meta_nonce" value="<?php echo $awebs_add_meta_nonce ?>" />
 
       <div class="row">
         <div class="label">
           <label>Opening Time: </label>
         </div>
         <div class="select">
-          <select name="openHour">
+          <select name="<?php echo 'awebs'; ?>[openHour]">
   <?php
               for ($i=0; $i < 24; $i++) {
                 if($i<10): $i= '0' . $i; endif;
@@ -36,7 +41,7 @@
   ?>
           </select>
           :
-          <select name="openMinute">
+          <select name="<?php echo 'awebs'; ?>[openMinute]">
   <?php
               for ($i=0; $i < 60; $i++) {
                 if($i<10): $i= '0' . $i; endif;
@@ -56,7 +61,7 @@
           <label>Closing Time: </label>
         </div>
         <div class="select">
-          <select name="closeHour">
+          <select name="<?php echo 'awebs'; ?>[closeHour]">
   <?php
               for ($i=0; $i < 24; $i++) {
                 if($i<10): $i= '0' . $i; endif;
@@ -67,7 +72,7 @@
   ?>
           </select>
           :
-          <select name="closeMinute">
+          <select name="<?php echo 'awebs'; ?>[closeMinute]">
   <?php
             for ($i=0; $i < 60; $i++) {
               if($i<10): $i= '0' . $i; endif;
@@ -84,22 +89,9 @@
 
       <div class="row">
         <!-- <input type="submit" name="submitTime" value="Submit Time" /> -->
-        <button type="submit" name="submit">Submit Time</button>
+        <button type="submit" name="submitWT">Submit Time</button>
       </div>
     </form>
 
   </div>
 </div>
-
-<?php
-  if ($_POST['submit']):
-    $openHour = $_POST['openHour'];
-    $openMinute = $_POST['openMinute'];
-    $closeHour = $_POST['closeHour'];
-    $closeMinute = $_POST['closeMinute'];
-    echo $newOpen . $newClose;
-
-    $newOpen = $openHour . ':' . $openMinute . ':00';
-    $newClose = $closeHour . ':' . $closeMinute . ':00';
-    $controller->updateWT($newOpen, $newClose);
-  endif;

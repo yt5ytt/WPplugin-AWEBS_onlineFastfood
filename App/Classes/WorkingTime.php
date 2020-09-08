@@ -78,12 +78,17 @@ class WorkingTime
     */
     protected function updateWorkingTime($openTime, $closeTime){
       global $wpdb;
+
       $data = array(
         'open_time' => $openTime,
         'close_time' => $closeTime
       );
 
-      $wpdb->update($this->tableName, $data, $this->id);
+      $where = array(
+        'id' => $this->id
+      );
+
+      $wpdb->update($this->tableName, $data, $where);
     }
 
 }
