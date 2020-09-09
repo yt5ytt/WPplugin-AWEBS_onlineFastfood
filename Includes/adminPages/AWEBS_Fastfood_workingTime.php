@@ -30,7 +30,7 @@
           <label>Opening Time: </label>
         </div>
         <div class="select">
-          <select name="<?php echo 'awebs'; ?>[openHour]">
+          <select name="openHour">
   <?php
               for ($i=0; $i < 24; $i++) {
                 if($i<10): $i= '0' . $i; endif;
@@ -41,7 +41,7 @@
   ?>
           </select>
           :
-          <select name="<?php echo 'awebs'; ?>[openMinute]">
+          <select name="openMinute">
   <?php
               for ($i=0; $i < 60; $i++) {
                 if($i<10): $i= '0' . $i; endif;
@@ -61,7 +61,7 @@
           <label>Closing Time: </label>
         </div>
         <div class="select">
-          <select name="<?php echo 'awebs'; ?>[closeHour]">
+          <select name="closeHour">
   <?php
               for ($i=0; $i < 24; $i++) {
                 if($i<10): $i= '0' . $i; endif;
@@ -72,7 +72,7 @@
   ?>
           </select>
           :
-          <select name="<?php echo 'awebs'; ?>[closeMinute]">
+          <select name="closeMinute">
   <?php
             for ($i=0; $i < 60; $i++) {
               if($i<10): $i= '0' . $i; endif;

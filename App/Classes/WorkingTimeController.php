@@ -26,23 +26,15 @@ class WorkingTimeController extends WorkingTime
    */
   public function updateWT(){
 
-    if(isset( $_POST['awebs_add_user_meta_nonce'] ) && wp_verify_nonce( $_POST['awebs_add_user_meta_nonce'], 'awebs_add_user_meta_form_nonce')){
+    if(isset($_POST['submitWT']) && $_POST['action'] == 'awebs_working_time'){
+      
+      $openHour = $_POST['openHour'];
+      $openMinute = $_POST['openMinute'];
+      $closeHour = $_POST['closeHour'];
+      $closeMinute = $_POST['closeMinute'];
 
-      foreach($_POST as $data){
-
-        if(is_array($data)){
-
-            $openHour = $data['openHour'];
-            $openMinute = $data['openMinute'];
-            $closeHour = $data['closeHour'];
-            $closeMinute = $data['closeMinute'];
-
-            $openTime = $openHour . ':' . $openMinute . ':00';
-            $closeTime = $closeHour . ':' . $closeMinute . ':00';
-
-        }
-
-      }
+      $openTime = $openHour . ':' . $openMinute . ':00';
+      $closeTime = $closeHour . ':' . $closeMinute . ':00';
 
     }
 
