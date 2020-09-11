@@ -1,20 +1,27 @@
-<div id="awebsIndex" class="wrapper">
-  <h1>This is an index page of admin menu pages</h1>
-  <p>This is an Fast food plugin. It manages the fast food articles and ingredients, manages online orders and manages users registered to the platform. In backend you will be able to administrate all of these components, a on frontend, users will be able to register, login, order fastfood to be delivered to regisered addresses.</p>
+<div id="awebsIndex">
+  <div class="naslov">
+    <h1>AlexWEBSoft online Fastfood plugin</h1>
+  </div>
+  <main>
 
+    <div class="main">
+      <p>This plugin is ment for clients who have fastfood restaurants. It provides all administration of items in restaurant, adding and updating ingredients, items, drinks and other stuff. This plugin has free and premium versions. With free version you have only two item categories. That are "Pizzas" and "Drinks". If you are interesting with premium version, you need to visit developers portfolio site, where you can see how to upgrade your free verison</p>
+      <p>With premium version you will be able to add new item categories, like "Pastas", "Barbeque" and all other that you need in your restaurant, to add items belongs to that category, and then to define prices, sizes and description of particular item.</p>
+      <p>This plugin provides client administration of costumer accounts, processing orders and full items administration.</p>
+      <h2>Backend sections:</h2>
+      <p>
+        - <b>Working Time</b>: Provides working time administration. It is important to open and close status of online restaurant,<br />
+        - <b>Food Categories</b>: Provides change of order categories (free version) and adding food categories (premium version),<br />
+        - <b>Items</b>: Provides adding items in food categories and changing order of items in tables,<br />
+        - <b>Items update</b>: Provides items price, sizes and description update,<br />
+      </p>
+    </div>
+
+  </main>
+
+  </div>
 </div>
 
 <?php
-  $permalink = get_permalink();
-  $page = $_GET['page'];
-  $thisPage = $permalink . '?page=' . $page;
-  echo $thisPage . '<br />';
 
-  ?>
-  <a href="<?php echo $thisPage; ?>&number=1">Klikni ovde</a><br />
-  <?php
-
-  if(isset($_GET['number'])):
-    echo $_GET['number'];
-  endif;
  ?>
