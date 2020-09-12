@@ -16,13 +16,13 @@ class SubmenuWorkingTime
   //admin submenu for working tim adjusment
   public function awebs_submenu_working_time(){
     add_submenu_page(
-      'awebs-fastfood',
+      'awebs_fastfood',
       'AWEBS FastFood - Working Time',
       'Working Time',
       'manage_options',
-      'working-time',
+      'working_time',
       array($this, 'AWEBS_Fastfood_workingTime'),
-      ''
+      50
     );
   }
 

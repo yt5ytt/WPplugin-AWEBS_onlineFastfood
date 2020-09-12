@@ -19,7 +19,7 @@ class AdminMenu
         'AWEBS FastFood - Naslovna',
         'AWEBS FastFood',
         'manage_options',
-        'awebs-fastfood',
+        'awebs_fastfood',
         array($this, 'AWEBS_Fastfood_index'),
         'dashicons-paperclip',
         3

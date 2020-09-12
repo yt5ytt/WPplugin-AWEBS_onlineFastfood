@@ -12,21 +12,21 @@
   margin: 0 auto;
 }
 
-h1{
+#workingTime h1{
   font-weight: bold;
   font-size: 2rem;
   text-transform: uppercase;
   line-height: 2rem;
 }
 
-h2{
+#workingTime h2{
   font-weight: bold;
   font-size: 1.5rem;
   margin-top: 5%;
   line-height: 1.5rem;
 }
 
-button{
+#workingTime button{
   line-height: 2rem;
   padding: 0 5%;
 }
@@ -63,9 +63,33 @@ button{
   float: left;
 }
 
+/*
+  awebsIndex css styles
+*/
+
 #awebsIndex{
   display: grid;
   grid-template-columns: 1fr;
+  overflow: hidden;
+}
+
+#awebsIndex h1{
+  font-weight: bold;
+  font-size: 2rem;
+  text-transform: uppercase;
+  line-height: 2rem;
+}
+
+#awebsIndex h2{
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 5%;
+  line-height: 1.5rem;
+}
+
+#awebsIndex button{
+  line-height: 2rem;
+  padding: 0 5%;
 }
 
 #awebsIndex > main{
@@ -75,4 +99,33 @@ button{
 
 #awebsIndex > main p{
   text-align: justify;
+}
+
+/*
+  Food Categories css styles
+*/
+
+#foodCategories{
+  display: grid;
+  grid-template-columns: 1fr;
+  overflow: hidden;
+}
+
+#foodCategories h1{
+  font-weight: bold;
+  font-size: 2rem;
+  text-transform: uppercase;
+  line-height: 2rem;
+}
+
+#foodCategories h2{
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 5%;
+  line-height: 1.5rem;
+}
+
+#foodCategories button{
+  line-height: 2rem;
+  padding: 0 5%;
 }
