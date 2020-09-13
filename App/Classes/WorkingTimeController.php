@@ -27,7 +27,7 @@ class WorkingTimeController extends WorkingTime
   public function updateWT(){
 
     if(isset($_POST['submitWT']) && $_POST['action'] == 'awebs_working_time'){
-      
+
       $openHour = $_POST['openHour'];
       $openMinute = $_POST['openMinute'];
       $closeHour = $_POST['closeHour'];
@@ -40,6 +40,6 @@ class WorkingTimeController extends WorkingTime
 
     $this->updateWorkingTime($openTime, $closeTime);
 
-    wp_redirect(admin_url('admin.php?page=working-time'));
+    wp_redirect(admin_url('admin.php?page=working_time'));
   }
 }

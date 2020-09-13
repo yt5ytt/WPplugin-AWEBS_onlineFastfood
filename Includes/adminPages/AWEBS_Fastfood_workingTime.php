@@ -2,9 +2,11 @@
 
   use App\Classes\WorkingTimeController;
   use App\Classes\WorkingTimeView;
+  use App\Classes\FormPosts;
 
   $controller = new WorkingTimeController();
   $view = new WorkingTimeView();
+  
   $openTime = $view->openHour . ':' . $view->openMinute;
   $closeTime = $view->closeHour . ':' . $view->closeMinute;
 
