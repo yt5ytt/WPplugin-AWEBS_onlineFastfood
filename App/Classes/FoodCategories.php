@@ -10,6 +10,7 @@ class FoodCategories
 {
 
   private $tableName;
+  private $orderNumber;
 
   /**
    * Sets $tableName
@@ -30,6 +31,7 @@ class FoodCategories
 
     $sql = "CREATE TABLE IF NOT EXISTS $this->tableName(
       id INT(3) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+      order_number INT(5) NOT NULL,
       category VARCHAR(50) NOT NULL,
       status VARCHAR(20) NOT NULL DEFAULT 'open'
     ) Engine=InnoDB collate utf8mb4_general_ci";
@@ -53,7 +55,11 @@ class FoodCategories
 
        $categories = array('Pizzas', 'Drinks');
        foreach($categories as $category):
-         $data = array('category' => $category);
+         $this->orderNumber ++;
+         $data = array(
+           'category' => $category,
+           'order_number' => $this->orderNumber
+         );
          $wpdb->insert($this->tableName, $data);
        endforeach;
 

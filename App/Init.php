@@ -22,8 +22,8 @@
        Init\Enqueue::class,
        Init\AdminMenu::class,
        Init\SubmenuFoodCategories::class,
-       Init\SubmenuWorkingTime::class,
-       Init\FormPosts::class
+       Init\FormPosts::class,
+       Init\SubmenuWorkingTime::class
      ];
    }
 
