@@ -16,14 +16,14 @@ class Enqueue
 
   //load plugin admin styles and scripts
   public function load_awebs_admin_plugin_scripts(){
-    wp_enqueue_style('awebs_admin_styles', AWEBS__PLUGIN_URL . 'includes/css/admin.css');
-    wp_enqueue_script('awebs_admin_script', AWEBS__PLUGIN_URL . 'includes/js/admin.js');
+    wp_enqueue_style('awebs_admin_styles', AWEBS__PLUGIN_URL . 'includes/css/awebsAdmin.css', array(), '', 'all');
+    wp_enqueue_script('awebs_admin_script', AWEBS__PLUGIN_URL . 'includes/js/awebsAdmin.js');
   }
 
   //load plugin wp styles and scripts
   public function load_awebs_wp_plugin_scripts(){
-    wp_enqueue_style('awebs_frontend_styles', AWEBS__PLUGIN_URL . 'includes/css/frontend.css');
-    wp_enqueue_script('awebs_frontend_script', AWEBS__PLUGIN_URL . 'includes/js/frontend.js', '', '', true);
+    wp_enqueue_style('awebs_frontend_styles', AWEBS__PLUGIN_URL . 'includes/css/awebsFrontend.css', array(), '', 'all');
+    wp_enqueue_script('awebs_frontend_script', AWEBS__PLUGIN_URL . 'includes/js/awebsFrontend.js', '', '', true);
   }
 
 }
