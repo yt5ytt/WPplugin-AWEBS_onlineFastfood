@@ -9,7 +9,7 @@
   $openTime = $view->openHour . ':' . $view->openMinute;
   $closeTime = $view->closeHour . ':' . $view->closeMinute;
 
-  $awebs_add_meta_nonce = wp_create_nonce( 'awebs_add_user_meta_form_nonce' );
+  // $awebs_add_meta_nonce = wp_create_nonce( 'awebs_add_user_meta_form_nonce' );
 ?>
 
 <div id="workingTime" class="wrapper">
@@ -24,7 +24,7 @@
     <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post">
 
       <input type="hidden" name="action" value="awebs_working_time" />
-      <input type="hidden" name="awebs_add_user_meta_nonce" value="<?php echo $awebs_add_meta_nonce ?>" />
+      <!-- <input type="hidden" name="awebs_add_user_meta_nonce" value="<?php //echo $awebs_add_meta_nonce ?>" /> -->
 
       <div class="row">
         <div class="label">

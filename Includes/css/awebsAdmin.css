@@ -107,8 +107,20 @@
 
 #foodCategories{
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   overflow: hidden;
+  grid-template-areas:
+  'title title'
+  'formPost list';
+  grid-gap: 1em;
+}
+
+#foodCategories div{
+  margin-bottom: 1rem;
+}
+
+#foodCateogries div:last-child{
+  margin-bottom: 0;
 }
 
 #foodCategories h1{
@@ -128,4 +140,45 @@
 #foodCategories button{
   line-height: 2rem;
   padding: 0 5%;
+  font-size: 1.2rem;
+}
+
+#foodCategories .title{
+  grid-area: title;
+}
+
+#foodCategories .formPost{
+  grid-area: formPost;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  'label'
+  'input'
+  'button';
+  grid-gap: 1em;
+}
+
+#foodCategories .formPost .row1{
+  grid-area: label;
+  line-height: 2rem;
+  font-size: 1.5rem;
+}
+
+#foodCategories .formPost .row2{
+  grid-area: input;
+  line-height: 2rem;
+}
+
+#foodCategories .formPost .row2 input{
+  width: 80%;
+}
+
+#foodCategories .formPost .row3{
+  text-align: center;
+  grid-area: button;
+  line-height: 2rem;
+}
+
+#foodCategories .list{
+  grid-area: list;
 }
