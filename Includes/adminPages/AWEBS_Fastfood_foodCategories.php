@@ -21,8 +21,8 @@
 
       <h2>ADD FOOD CATEGORIES</h2>
 
-      <div class="row1"><label for="foodCategories">New food category</label></div>
-      <div class="row2"><input type="text" name="foodCategory" value="" /></div>
+      <!-- <div class="row1"><label for="foodCategories">New food category</label></div> -->
+      <div class="row2"><input type="text" name="foodCategory" value="" placeholder="New food category"/></div>
       <div class="row3"><button type="button" name="submit">Submit Category</button></div>
 
 
